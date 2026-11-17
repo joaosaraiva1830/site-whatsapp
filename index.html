@@ -21,6 +21,8 @@
 
   <!-- Meta Pixel Code -->
   <script>
+    var PIXEL_ID = ''; // coloque aqui o ID do Pixel; vazio = Pixel desligado
+    if (PIXEL_ID) {
     !function(f,b,e,v,n,t,s)
     {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
     n.callMethod.apply(n,arguments):n.queue.push(arguments)};
@@ -29,8 +31,9 @@
     t.src=v;s=b.getElementsByTagName(e)[0];
     s.parentNode.insertBefore(t,s)}(window, document,'script',
     'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '2050900808672814');
+    fbq('init', PIXEL_ID);
     fbq('track', 'PageView');
+    }
   </script>
   <!-- End Meta Pixel Code -->
 
@@ -525,10 +528,11 @@
   </style>
 </head>
 <body>
-  <!-- Meta Pixel noscript -->
+  <!-- Meta Pixel noscript: descomente e troque SEU_PIXEL_ID quando tiver o Pixel
   <noscript>
-    <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=2050900808672814&ev=PageView&noscript=1" alt="" />
+    <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=SEU_PIXEL_ID&ev=PageView&noscript=1" alt="" />
   </noscript>
+  -->
 
   <main style="overflow-x: hidden;">
     <!-- Hero -->
@@ -779,7 +783,7 @@
         if (typeof window.fbq === 'function') {
           fbq('track', 'Lead', { content_name: origem, content_category: 'Contact' });
         }
-        window.open('https://wa.me/5575988700994?text=' + encodeURIComponent(mensagem), '_blank');
+        window.open('https://wa.me/5598996053991?text=' + encodeURIComponent(mensagem), '_blank');
       };
 
       var testimonials = [
